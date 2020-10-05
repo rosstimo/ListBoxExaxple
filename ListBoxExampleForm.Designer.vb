@@ -29,7 +29,7 @@ Partial Class ListBoxExampleForm
         '
         Me.DisplayListBox.FormattingEnabled = True
         Me.DisplayListBox.ItemHeight = 20
-        Me.DisplayListBox.Location = New System.Drawing.Point(249, 12)
+        Me.DisplayListBox.Location = New System.Drawing.Point(256, 12)
         Me.DisplayListBox.Name = "DisplayListBox"
         Me.DisplayListBox.Size = New System.Drawing.Size(539, 324)
         Me.DisplayListBox.TabIndex = 0
@@ -38,7 +38,7 @@ Partial Class ListBoxExampleForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(807, 461)
         Me.Controls.Add(Me.DisplayListBox)
         Me.Name = "ListBoxExampleForm"
         Me.Text = "List Box Example"
