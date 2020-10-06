@@ -42,6 +42,7 @@ Partial Class ListBoxExampleForm
         Me.ClientSize = New System.Drawing.Size(807, 461)
         Me.Controls.Add(Me.DisplayListBox)
         Me.Name = "ListBoxExampleForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "List Box Example"
         Me.ResumeLayout(False)
 

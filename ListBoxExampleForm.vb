@@ -43,8 +43,10 @@ Public Class ListBoxExampleForm
 
     Private Sub ListBoxExampleForm_ResizeEnd(sender As Object, e As EventArgs) Handles Me.Resize
         Me.Text = Me.Height.ToString
-        DisplayListBox.Height = CInt(Me.Height * 0.8)
-        DisplayListBox.Width = CInt(Me.Width * 0.6)
+        DisplayListBox.Top = 20
+        DisplayListBox.Left = 100
+        DisplayListBox.Height = CInt(Me.Height - 120)
+        DisplayListBox.Width = CInt(Me.Width - 150)
         'DisplayListBox.Location = (Me.Top, CInt(Me.Width * 0.4))
     End Sub
 
