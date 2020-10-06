@@ -3,10 +3,10 @@ Option Explicit On
 
 Public Class ListBoxExampleForm
     Private Sub ListBoxExampleForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        LoadFakeData()
+        'LoadFakeData()
+
+        TimesTable(12)
         UpdateListBox(DataKeeper(""))
-
-
 
     End Sub
 
@@ -47,4 +47,26 @@ Public Class ListBoxExampleForm
         DisplayListBox.Width = CInt(Me.Width * 0.6)
         'DisplayListBox.Location = (Me.Top, CInt(Me.Width * 0.4))
     End Sub
+
+    Sub TimesTable(firstNumber As Integer)
+        Dim temp$
+        Dim rowData As String
+        Const padLen% = 6
+        'Console.Clear()
+
+
+        'Console.WriteLine($"Enjoy your {firstNumber} x {firstNumber} Multiplication Table:" & vbNewLine)
+
+        For row = 1 To firstNumber
+            For column = 1 To firstNumber
+                temp = CStr(row * column)
+                rowData &= temp.PadLeft(padLen)
+            Next
+            DataKeeper(rowData)
+            rowData = ""
+        Next
+
+    End Sub
+
+
 End Class

@@ -27,11 +27,12 @@ Partial Class ListBoxExampleForm
         '
         'DisplayListBox
         '
+        Me.DisplayListBox.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DisplayListBox.FormattingEnabled = True
-        Me.DisplayListBox.ItemHeight = 20
+        Me.DisplayListBox.ItemHeight = 28
         Me.DisplayListBox.Location = New System.Drawing.Point(256, 12)
         Me.DisplayListBox.Name = "DisplayListBox"
-        Me.DisplayListBox.Size = New System.Drawing.Size(539, 324)
+        Me.DisplayListBox.Size = New System.Drawing.Size(539, 312)
         Me.DisplayListBox.TabIndex = 0
         '
         'ListBoxExampleForm
