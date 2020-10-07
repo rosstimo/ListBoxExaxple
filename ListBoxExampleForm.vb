@@ -23,7 +23,7 @@ Public Class ListBoxExampleForm
     End Sub
 
     Private Sub DisplayListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DisplayListBox.SelectedIndexChanged
-        Me.Text = DisplayListBox.SelectedItem.ToString
+        'Me.Text = DisplayListBox.SelectedItem.ToString
         'Me.Text = DisplayListBox.SelectedIndex.ToString
     End Sub
 
@@ -74,15 +74,21 @@ Public Class ListBoxExampleForm
 
     End Sub
 
-    Private Sub DisplayFileMenuItem_Click(sender As Object, e As EventArgs) Handles DisplayFileMenuItem.Click
+    Private Sub DisplayFileMenuItem_Click(sender As Object, e As EventArgs) Handles DisplayFileMenuItem.Click, DisplayFormContextMenuItem.Click
         UpdateListBox(DataKeeper(""))
     End Sub
 
-    Private Sub ClearFileMenuItem_Click(sender As Object, e As EventArgs) Handles ClearFileMenuItem.Click
+    Private Sub ClearFileMenuItem_Click(sender As Object, e As EventArgs) Handles ClearFileMenuItem.Click, ClearFormContextMenuItem.Click
         DisplayListBox.Items.Clear()
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
+    End Sub
+
+    Private Sub RemoveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveToolStripMenuItem.Click
+
+        'TODO remove item from data keeper then clear and update listbox
+        DisplayListBox.Items.RemoveAt(DisplayListBox.SelectedIndex)
     End Sub
 End Class
