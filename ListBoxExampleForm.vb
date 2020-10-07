@@ -6,8 +6,8 @@ Public Class ListBoxExampleForm
         'LoadFakeData()
 
         TimesTable(12)
-        UpdateListBox(DataKeeper(""))
-
+        'UpdateListBox(DataKeeper(""))
+        Rescale()
     End Sub
 
     Sub UpdateListBox(displayData As List(Of String))
@@ -42,6 +42,10 @@ Public Class ListBoxExampleForm
     End Sub
 
     Private Sub ListBoxExampleForm_ResizeEnd(sender As Object, e As EventArgs) Handles Me.Resize
+        Rescale()
+    End Sub
+
+    Sub Rescale()
         Me.Text = Me.Height.ToString
         DisplayListBox.Top = 20
         DisplayListBox.Left = 100
@@ -70,5 +74,15 @@ Public Class ListBoxExampleForm
 
     End Sub
 
+    Private Sub DisplayFileMenuItem_Click(sender As Object, e As EventArgs) Handles DisplayFileMenuItem.Click
+        UpdateListBox(DataKeeper(""))
+    End Sub
 
+    Private Sub ClearFileMenuItem_Click(sender As Object, e As EventArgs) Handles ClearFileMenuItem.Click
+        DisplayListBox.Items.Clear()
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Me.Close()
+    End Sub
 End Class
